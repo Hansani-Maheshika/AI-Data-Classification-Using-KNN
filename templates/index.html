@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Data Classification Using KNN</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>AI Data Classification Using KNN</h1>
+        <p class="subtitle">Predict Iris flower species using supervised machine learning</p>
+
+        <form method="POST">
+            <label>Sepal Length (cm)</label>
+            <input type="number" step="0.1" name="sepal_length" required>
+
+            <label>Sepal Width (cm)</label>
+            <input type="number" step="0.1" name="sepal_width" required>
+
+            <label>Petal Length (cm)</label>
+            <input type="number" step="0.1" name="petal_length" required>
+
+            <label>Petal Width (cm)</label>
+            <input type="number" step="0.1" name="petal_width" required>
+
+            <button type="submit">Predict Flower Type</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            <h2>Prediction Result</h2>
+            <p>{{ prediction }}</p>
+        </div>
+        {% endif %}
+
+    <div class="report-section">
+    <h2>Model Evaluation Report</h2>
+
+    <p style="color: red; font-weight: bold;">
+        Debug Report Length: {{ report_text|length }}
+    </p>
+
+    <pre class="report-box">{{ report_text or "No report loaded. Please run train_model.py first." }}</pre>
+</div>
+        <div class="visual-section">
+            <h2>Confusion Matrix</h2>
+            <img src="{{ url_for('static', filename='plots/confusion_matrix.png') }}" alt="Confusion Matrix">
+        </div>
+
+        <div class="visual-section">
+            <h2>KNN Visualization</h2>
+            <p class="note">
+                This visualization uses only petal length and petal width to visually demonstrate how KNN separates classes.
+                The actual prediction model still uses all 4 Iris features.
+            </p>
+            <img src="{{ url_for('static', filename='plots/knn_visualization.png') }}" alt="KNN Visualization">
+        </div>
+    </div>
+    
+
+</body>
+</html>

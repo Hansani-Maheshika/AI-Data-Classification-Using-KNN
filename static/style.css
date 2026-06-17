@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+    min-height: 100vh;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 900px;
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #475569;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    color: #334155;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    margin-top: 22px;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.result {
+    margin-top: 25px;
+    padding: 18px;
+    background: #eff6ff;
+    border-left: 5px solid #2563eb;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.result h2 {
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+.result p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0f172a;
+}
+
+.visual-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.visual-section h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.visual-section img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 15px auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+}
+
+pre {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+.note {
+    color: #475569;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.report-section {
+    margin-top: 30px;
+    padding: 25px;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.report-section h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.report-box {
+    display: block !important;
+    background-color: #0f172a !important;
+    color: #ffffff !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+    overflow-x: auto !important;
+    white-space: pre-wrap !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    min-height: 180px !important;
+    font-family: Consolas, monospace !important;
+}
